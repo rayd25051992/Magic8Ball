@@ -37,9 +37,27 @@ namespace Magic8Ball
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            string[] responses = { "Maybe you should give it a go", "test", "test1"  };
 
-            Response.Text = responses[new Random().Next(0, responses.Length)];
+            if (question.Text == "")
+            {
+
+                Response.Text = "You have got to ask me a question first";
+
+            }
+
+            else
+            {
+
+
+                string[] responses = { "It is certain", "It is decidedly so", "Without a doubt", "Yes", "Nahhhh",
+                                     "No way", "You serious!?", "Yes you may rely on it", "Outlook good", "Ask again later", "Cannot predict now",
+                                 "That could work"};
+
+
+                Response.Text = responses[new Random().Next(0, responses.Length)];
+
+            }
+
 
         }
     }
