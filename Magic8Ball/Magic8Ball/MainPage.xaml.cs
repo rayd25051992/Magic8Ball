@@ -34,5 +34,13 @@ namespace Magic8Ball
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            string[] responses = { "Maybe you should give it a go", "test", "test1"  };
+
+            Response.Text = responses[new Random().Next(0, responses.Length)];
+
+        }
     }
 }
